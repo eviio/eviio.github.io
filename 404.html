@@ -1,0 +1,38 @@
+
+<script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js">
+
+</script>
+
+<script>
+
+    var url = purl();
+
+    var domain_url = 'eviio.com'
+
+    var domain_url_www = 'www.eviio.com'
+
+    var ip_url = '115.195.178.203'
+
+    if (url.attr('host') == domain_url) {
+
+        var old_url = url.attr('source');
+
+        var new_url = old_url.replace(domain_url, ip_url);
+
+        window.location.replace(new_url);
+
+    } else if (url.attr('host') == domain_url_www) {
+
+        var old_url = url.attr('source');
+
+        var new_url = old_url.replace(domain_url_www, ip_url);
+
+        window.location.replace(new_url);
+
+    } else {
+
+        window.location.href = domain_url;
+
+    }
+
+</script>
